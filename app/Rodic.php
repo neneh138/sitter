@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sitter extends Model
+class Rodic extends Model
 {
-    //
-    public function rodicove()
+    public function sitters()
     {
-        return $this->belongsToMany('App\Rodic');
+        return $this->belongsToMany('App\Sitter');
     }
 
     public function ages()
@@ -27,18 +26,13 @@ class Sitter extends Model
         return $this->belongsToMany('App\SpecialNeed');
     }
 
-    public function locations()
-    {
-        return $this->belongsToMany('App\Location');
-    }
-
     public function languages()
     {
         return $this->belongsToMany('App\Language');
     }
+
     public function certificates()
     {
         return $this->belongsToMany('App\Certificate');
     }
-
 }

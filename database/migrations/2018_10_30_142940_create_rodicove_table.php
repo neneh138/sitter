@@ -13,7 +13,7 @@ class CreateParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parents', function (Blueprint $table) {
+        Schema::create('rodicove', function (Blueprint $table) {
             $table->increments('parrent_id');
             $table->string('name');
             $table->string('surname');
