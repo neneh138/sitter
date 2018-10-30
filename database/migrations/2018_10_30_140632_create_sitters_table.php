@@ -15,6 +15,7 @@ class CreateSittersTable extends Migration
     {
         Schema::create('sitters', function (Blueprint $table) {
             $table->increments('sitter_id');
+            $table->integer('user_id');
             $table->string('name');
             $table->string('surname');
             $table->string('phone_number');

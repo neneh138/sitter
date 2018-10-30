@@ -12,8 +12,8 @@ class Certificate extends Model
         return $this->belongsToMany('App\Sitter');
     }
 
-    public function rodicove()
+    public function families()
     {
-        return $this->belongsToMany('App\Rodic');
+        return $this->belongsToMany('App\Family');
     }
 }

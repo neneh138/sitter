@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Sitter extends Model
 {
     //
-    public function rodicove()
+
+    public function families()
     {
-        return $this->belongsToMany('App\Rodic');
+        return $this->belongsToMany('App\Family');
     }
 
     public function ages()
@@ -41,4 +42,8 @@ class Sitter extends Model
         return $this->belongsToMany('App\Certificate');
     }
 
+    public function favorites()
+    {
+        return $this->belongsToMany('App\Favorite');
+    }
 }

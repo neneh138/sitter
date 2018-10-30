@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Rodic extends Model
+class Family extends Model
 {
+    //
     public function sitters()
     {
         return $this->belongsToMany('App\Sitter');
@@ -34,5 +35,10 @@ class Rodic extends Model
     public function certificates()
     {
         return $this->belongsToMany('App\Certificate');
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany('App\Favorite');
     }
 }
