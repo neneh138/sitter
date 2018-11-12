@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::resource('/home', 'HomeController');
+
+
+Route::resource('/sitters', 'SittersController');
+
+Route::resource('/parents', 'ParentsController');
