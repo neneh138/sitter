@@ -24,7 +24,7 @@ class SittersController extends Controller
      */
     public function create()
     {
-        return view('homepage.create');
+        return view('register/sitters');
 
     }
 

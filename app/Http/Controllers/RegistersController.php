@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Sitter;
-use App\Family;
 
-class ParentsController extends Controller
+class RegistersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +13,9 @@ class ParentsController extends Controller
      */
     public function index()
     {
-        $title = 'Hi Parent';
-        $sitters = Sitter::all();
+        //
 
-        return view('parents.index', compact('title', 'sitters'));
-
-
+        return view('register.index');
     }
 
     /**
@@ -31,7 +26,8 @@ class ParentsController extends Controller
     public function create()
     {
         //
-        return view('register/parents');
+        return view('register/create');
+
     }
 
     /**
@@ -44,7 +40,7 @@ class ParentsController extends Controller
     {
         //
         $this->validate($request, [
-            'family'=>'required',
+            'sitter'=>'required',
             'name'=> 'required',
             'surname'=> 'required',
             'phoneNumber'=> 'required',
@@ -62,51 +58,36 @@ class ParentsController extends Controller
             'emergencyContact'=> 'required'
 ]);
 
-        // Handle File Upload
-        if($request->hasFile('image')){
-            // Get filename with the extension
-            $filenameWithExt = $request->file('image')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just ext
-            $extension = $request->file('image')->getClientOriginalExtension();
-            // Filename to store
-            $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            // Upload Image
-            $path = $request->file('image')->storeAs('public/image', $fileNameToStore);
-        } else {
-            $fileNameToStore = 'noimage.jpg';
-}
+            $sitter = new Sitter;
+            $sitter->sitter = $request->input('option');
+            $sitter->name = $request->input('name');
+            $sitter->surname = $request->input('surname');
+            $sitter->user_id = auth()->user()->id;
+            $sitter->image = $fileNameToStore;
 
-        $family = new family;
-        $family->family = $request->input('option');
-        $family->name = $request->input('name');
-        $family->surname = $request->input('surname');
-        $family->user_id = auth()->user()->id;
-        $family->image = $fileNameToStore;
+            $sitter->phoneNumber = $request->input('phoneNumber');
+            $sitter->description = $request->input('description');
+            $sitter->ageCategories = $request->input('ageCategories');
+            $sitter->location = $request->input('location');
 
-        $family->phoneNumber = $request->input('phoneNumber');
-        $family->description = $request->input('description');
-        $family->ageCategories = $request->input('ageCategories');
-        $family->location = $request->input('location');
-
-        $family->availabity = $request->input('availabity');
-        $family->specialNeeds = $request->input('specialNeeds');
-        $family->language = $request->input('language');
-        $family->certificate = $request->input('certificate');
+            $sitter->availabity = $request->input('availabity');
+            $sitter->specialNeeds = $request->input('specialNeeds');
+            $sitter->language = $request->input('language');
+            $sitter->certificate = $request->input('certificate');
 
 
-        $family->smoker = $request->input('smoker');
-        $family->emergencyFullName = $request->input('emergencyFullName');
-        $family->emergencyContact = $request->input('emergencyContact');
+            $sitter->smoker = $request->input('smoker');
+            $sitter->emergencyFullName = $request->input('emergencyFullName');
+            $sitter->emergencyContact = $request->input('emergencyContact');
 
 
 
-        $sitter->save();
-        return redirect ('/parents')->with('success', 'Profile created');
+            $sitter->save();
+            return redirect ('babysitters')->with('success', 'Profile created');
+
+
+
     }
-
-
 
     /**
      * Display the specified resource.

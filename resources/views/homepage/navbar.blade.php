@@ -29,7 +29,7 @@
                                         <a class= "mr-2  btn btn-success btn-md" href="/login" role="button">Login</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="btn btn-primary btn-md" href="/register" role="button">Register</a>
+                                        <a class="btn btn-primary btn-md" href="/register/index" role="button">Register</a>
                                     </li>
                                 </ul>
                             </div>
