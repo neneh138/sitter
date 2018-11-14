@@ -3,7 +3,8 @@
 
 <div class="container">
 
-<form >
+<form action="" method="post" enctype="multipart/form-data">
+        <?= csrf_field() ?>
     <div class="container">
         <div class="form-row">
             <div class="form-group col-sm-12 col-md-6">
@@ -33,18 +34,30 @@
             </div>
             <div class="form-group col-sm-12 col-md-6">
                     <label for="Location">Location</label>
-                    <select class="form-control" id="Location">
-                      <option>Prague 1</option>
-                      <option>Prague 2</option>
-                      <option>Prague 3</option>
-                      <option>Prague 4</option>
-                      <option>Prague 5</option>
-                      <option>Prague 6</option>
-                      <option>Prague 7</option>
-                      <option>Prague 8</option>
-                      <option>Prague 9</option>
-                      <option>Prague 10</option>
-                    </select>
+                        <select class="form-control" id="Location">
+                            <option>Prague 1</option>
+                            <option>Prague 2</option>
+                            <option>Prague 3</option>
+                            <option>Prague 4</option>
+                            <option>Prague 5</option>
+                            <option>Prague 6</option>
+                            <option>Prague 7</option>
+                            <option>Prague 8</option>
+                            <option>Prague 9</option>
+                            <option>Prague 10</option>
+                            <option>Prague 11</option>
+                            <option>Prague 12</option>
+                            <option>Prague 13</option>
+                            <option>Prague 14</option>
+                            <option>Prague 15</option>
+                            <option>Prague 16</option>
+                            <option>Prague 17</option>
+                            <option>Prague 18</option>
+                            <option>Prague 19</option>
+                            <option>Prague 20</option>
+                            <option>Prague 21</option>
+                            <option>Prague 22</option>
+                         </select>
             </div>
         </div>
 
@@ -212,7 +225,7 @@
     <div class="container">
             <div class="form-row">
                 <div class="form-group mb-1 col-sm-12 col-md-12 id=driverLicence" >
-                    <label for="Certificate"class="font-weight-bold mt-3">Driver licence</label>
+                    <label for="Driver licence"class="font-weight-bold mt-3">Driver licence</label>
                 </div>
             </div>
             <div class=" form-group form-check form-check-inline">
@@ -224,10 +237,11 @@
                 <label class="form-check-label" for="driverLicenceNo">No</label>
             </div>
     </div>
+
     <div class="container">
             <div class="form-row">
                 <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                    <label for="Certificate"class="font-weight-bold mt-3">Smoker</label>
+                    <label for="smoker"class="font-weight-bold mt-3">Smoker</label>
                 </div>
             </div>
             <div class=" form-group form-check form-check-inline">
@@ -239,10 +253,11 @@
                 <label class="form-check-label" for="smokerNo">No</label>
             </div>
     </div>
+
     <div class="container">
         <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                <label for="Certificate"class="font-weight-bold mt-3">Images</label>
+            <div class="form-group mb-1 col-sm-12 col-md-12 id=images" >
+                <label for="images"class="font-weight-bold mt-3">Images</label>
             </div>
         </div>
         <div class="form-group mb-2 custom-file">
@@ -252,8 +267,8 @@
     </div>
     <div class="container">
         <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                <label for="Certificate"class="font-weight-bold mt-3">Documents</label>
+            <div class="form-group mb-1 col-sm-12 col-md-12 id=documents" >
+                <label for="documents"class="font-weight-bold mt-3">Documents</label>
             </div>
         </div>
         <div class="form-group mb-2 custom-file">
@@ -269,22 +284,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="container">
         <div class="form-row">

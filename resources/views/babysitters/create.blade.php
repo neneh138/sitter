@@ -3,7 +3,8 @@
 
 <div class="container">
 
-<form>
+<form action="{{action('SittersController@store')}}" method="post" enctype="multipart/form-data">
+    @csrf_field
     <div class="container">
         <div class="form-row">
             <div class="form-group col-sm-12 col-md-6">
@@ -26,27 +27,7 @@
                 <input type="text" class="form-control" placeholder="Last name">
             </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Phone number">Phone number</label>
-                <input type="text" class="form-control" placeholder="Phone number">
-            </div>
-{{--             <div class="form-group col-sm-12 col-md-6">
-                    <label for="Location">Location</label>
-                    <select class="form-control" id="Location">
-                      <option>Prague 1</option>
-                      <option>Prague 2</option>
-                      <option>Prague 3</option>
-                      <option>Prague 4</option>
-                      <option>Prague 5</option>
-                      <option>Prague 6</option>
-                      <option>Prague 7</option>
-                      <option>Prague 8</option>
-                      <option>Prague 9</option>
-                      <option>Prague 10</option>
-                    </select>
-            </div> --}}
-        </div>
+
 
         <div class="form-row">
             <div class="form-group col-sm-12 col-md-6">
@@ -57,6 +38,13 @@
                 <label for="Emergency contact phone number">Emergency contact phone number</label>
                 <input type="text" class="form-control" placeholder="Emergency contact phone number">
             </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-12 col-md-6">
+                <label for="Phone number">Phone number</label>
+                <input type="text" class="form-control" placeholder="Phone number">
+            </div>
+
         </div>
     </div>
 
@@ -260,7 +248,7 @@
     <div class="container">
             <div class="form-row">
                 <div class="form-group mb-1 col-sm-12 col-md-12 id=driverLicence" >
-                    <label for="Certificate"class="font-weight-bold mt-3">Driver licence</label>
+                    <label for="driverLicence"class="font-weight-bold mt-3">Driver licence</label>
                 </div>
             </div>
             <div class=" form-group form-check form-check-inline">
@@ -275,7 +263,7 @@
     <div class="container">
             <div class="form-row">
                 <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                    <label for="Certificate"class="font-weight-bold mt-3">Smoker</label>
+                    <label for="smoker"class="font-weight-bold mt-3">Smoker</label>
                 </div>
             </div>
             <div class=" form-group form-check form-check-inline">
@@ -289,8 +277,8 @@
     </div>
     <div class="container">
         <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                <label for="Certificate"class="font-weight-bold mt-3">Images</label>
+            <div class="form-group mb-1 col-sm-12 col-md-12 id=images" >
+                <label for="images"class="font-weight-bold mt-3">Images</label>
             </div>
         </div>
         <div class="form-group mb-2 custom-file">
@@ -300,8 +288,8 @@
     </div>
     <div class="container">
         <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12 id=smoker" >
-                <label for="Certificate"class="font-weight-bold mt-3">Documents</label>
+            <div class="form-group mb-1 col-sm-12 col-md-12 id=documents" >
+                <label for="documents"class="font-weight-bold mt-3">Documents</label>
             </div>
         </div>
         <div class="form-group mb-2 custom-file">
@@ -317,23 +305,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container">
         <div class="form-row">
             <div class="table-responsive">

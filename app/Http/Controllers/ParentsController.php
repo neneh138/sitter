@@ -31,7 +31,7 @@ class ParentsController extends Controller
     public function create()
     {
         //
-        return view('register/parents');
+        return view('/parents/create');
     }
 
     /**
@@ -82,7 +82,8 @@ class ParentsController extends Controller
         $family->family = $request->input('option');
         $family->name = $request->input('name');
         $family->surname = $request->input('surname');
-        $family->user_id = auth()->user()->id;
+        $family->location = $request->input('location');
+        
         $family->image = $fileNameToStore;
 
         $family->phoneNumber = $request->input('phoneNumber');
@@ -117,6 +118,8 @@ class ParentsController extends Controller
     public function show($id)
     {
         //
+        $sitter = Sitter::find($id)->paginate(5);
+        return view ('parents.show',compact('sitter'));
     }
 
     /**

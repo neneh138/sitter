@@ -14,16 +14,14 @@
 
     @include('homepage\navbar')
 
-<div class="container">
     @yield('content')
 
-</div>
 
 
 
 
 
-
+<script></script>
 
 
 

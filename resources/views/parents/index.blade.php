@@ -13,6 +13,7 @@
     <small>Registered since{{$sitter->created_at}}</small>
     </div>
     @endforeach
+    {{$sisters->links()}}
         @else
     <p>No results found</p>
     @endif
