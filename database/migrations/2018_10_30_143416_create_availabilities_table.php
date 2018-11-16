@@ -13,8 +13,16 @@ class CreateAvailabilitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('availabilities', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('availabilities_', function (Blueprint $table) {
+            $table->increments('availability_id');
+            $table->string('week_day')->nullable();
+            $table->string('part_of_day')->nullable();
+
+            $table->timestamps();
+
+/*
+
+            $table->integer('parent_id');
             $table->string('Monday');
             $table->string('Tuesday');
             $table->string('Wednesday');
@@ -22,7 +30,7 @@ class CreateAvailabilitiesTable extends Migration
             $table->string('Friday');
             $table->string('Saturday');
             $table->string('Sunday');
-            $table->timestamps();
+            $table->timestamps(); */
         });
     }
 

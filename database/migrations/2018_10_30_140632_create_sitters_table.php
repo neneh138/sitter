@@ -15,16 +15,21 @@ class CreateSittersTable extends Migration
     {
         Schema::create('sitters', function (Blueprint $table) {
             $table->increments('sitter_id');
-            $table->string('name');
-            $table->string('surname');
-            $table->string('phone_number');
-            $table->string('emergency_contact_fullname');
-            $table->string('emergency_contact_phonenumber');
-            $table->mediumText('description');
-            $table->mediumText('review');
-            $table->longText('message_me');
-            $table->string('image');
-            $table->string('image_documents');
+            $table->string('name')->nullable();
+            $table->string('surname')->nullable();
+            $table->string('phone_number')->nullable();
+
+            $table->mediumText('description')->nullable();
+
+            $table->string('image')->nullable();
+
+            $table->integer('certificate_id')->nullable();
+            $table->integer('driver_license_id')->nullable();
+
+            $table->integer('smoker_id')->nullable();
+
+
+
 
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

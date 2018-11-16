@@ -1,0 +1,6 @@
+after selectin one of the options:
+@if($value == "one"){
+return redirect ('babysitters/create')
+}else {
+return redirect ('parents/create')
+}

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCertificatesTable extends Migration
+class CreateSitterReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCertificatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('certificates', function (Blueprint $table) {
-            $table->increments('certificate_id');
-            $table->string('certificate');
-   
-
+        Schema::create('sitter_reviews', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('sitter_id');
+            $table->string('review');
 
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateCertificatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('certificates');
+        Schema::dropIfExists('sitter_reviews');
     }
 }

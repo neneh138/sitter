@@ -4,177 +4,21 @@
 <div class="container">
 
 <form action="{{action('SittersController@store')}}" method="post" enctype="multipart/form-data">
-    @csrf_field
-    <div class="container">
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="First name">First name</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Last name">Last name</label>
-                <input type="text" class="form-control" placeholder="Last name">
-            </div>
-        </div>
 
 
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Emergency contact full name">Emergency contact full name</label>
-                <input type="text" class="form-control" placeholder="Emergency contact full name">
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Emergency contact phone number">Emergency contact phone number</label>
-                <input type="text" class="form-control" placeholder="Emergency contact phone number">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Phone number">Phone number</label>
-                <input type="text" class="form-control" placeholder="Phone number">
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12" id="location " >
-                <label for="Location" class="font-weight-bold mt-5">Location</label>
-            </div>
-        </div>
-        <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 1</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 2</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 3</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 4</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 5</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 6</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 7</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 8</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 9</label>
-         </div>
-         <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="locationPrague1" value="locationPrague1">
-            <label class="form-check-label" for="locationPrague1-1"  id="locationPrague1">Prague 10</label>
-         </div>
-    </div>
 
 
-    <div class="container">
-        <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12" id="ageCategories " >
-                <label for="Age categories" class="font-weight-bold mt-5">Age categories</label>
-            </div>
-        </div>
 
 
-        <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="ageCategories0-1" value="option1">
-            <label class="form-check-label" for="ageCategories0-1"  id="ageCategories0-1">0-1</label>
-        </div>
 
-        <div class=" form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="ageCategories1-3" value="option2">
-            <label class="form-check-label" for="ageCategories1-3" id="ageCategories1-3">1-3</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="ageCategories3-6" value="option2">
-            <label class="form-check-label" for="ageCategories3-6" id="ageCategories3-6">3-6</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="ageCategories6-10" value="option2">
-            <label class="form-check-label" for="ageCategories6-10" id="ageCategories6-10" >6-10</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="ageCategories10-14" value="option2">
-            <label class="form-check-label" for="ageCategories10-14" id="ageCategories10-14">10-14</label>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12" id="specialNeeds " >
-                <label for="Special Needs" class="font-weight-bold mt-3">Special Needs</label>
-            </div>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class=" form-check-input" type="checkbox" id="specialNeedNone" value="specialNeedNone">
-            <label class="form-check-label" for="specialNeedNone">None</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="specialNeedAutism" value="specialNeedAutism">
-            <label class="form-check-label" for="specialNeedAutism">Autism</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="specialNeedDiabetes" value="specialNeedDiabetes">
-            <label class="form-check-label" for="specialNeedDiabetes">Diabetes</label>
-        </div>
 
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="specialNeedAsthma" value="specialNeedAsthma">
-            <label class="form-check-label" for="specialNeedAsthma">Asthma</label>
-        </div>
-
-        <div class="form-group form-check form-check-inline">
-            <input class=" Form-check-input" type="checkbox" id="specialNeedADHD" value="specialNeedADHD">
-            <label class="form-check-label" for="specialNeedADHD">ADHD</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="specialNeedEpilepsy" value="specialNeedEpilepsy">
-            <label class="form-check-label" for="specialNeedEpilepsy">Epilepsy</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="specialNeedDownsyndrome" value="specialNeedDownsyndrome">
-            <label class="form-check-label" for="specialNeedDownsyndrome">Down's syndrome</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <label for="Other">Other</label>
-            <input type="text" class="form-control" id="specialNeedDownsyndrome" >
-        </div>
-    </div>
 
     <div class="container">
         <div class="form-row">
@@ -185,45 +29,7 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="form-row">
-            <div class="form-group mb-1 col-sm-12 col-md-12" >
-                <label for="Language"class="font-weight-bold mt-3">Language</label>
-            </div>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageEnglish" value="languageEnglish">
-            <label class="form-check-label" for="languageEnglish">English</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageDeutsch" value="languageDeutsch">
-            <label class="form-check-label" for="languageDeutsch">Deutsch</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageEspañol" value="languageEspañol">
-            <label class="form-check-label" for="languageEspañol">Español</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageFrançais" value="languageFrançais">
-            <label class="form-check-label" for="languageFrançais">Français</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageItaliano" value="languageItaliano">
-            <label class="form-check-label" for="languageItaliano">Italiano</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageČeština" value="languageČeština">
-            <label class="form-check-label" for="languageČeština">Čeština</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languageSlovenčina" value="languageSlovenčina">
-            <label class="form-check-label" for="languageSlovenčina">Slovenčina</label>
-        </div>
-        <div class="form-group form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languagePусский" value="languagePусский">
-            <label class="form-check-label" for="languagePусский">Pусский</label>
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="form-row">

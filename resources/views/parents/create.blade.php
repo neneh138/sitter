@@ -35,28 +35,28 @@
             <div class="form-group col-sm-12 col-md-6">
                     <label for="Location">Location</label>
                         <select class="form-control" id="Location">
-                            <option>Prague 1</option>
-                            <option>Prague 2</option>
-                            <option>Prague 3</option>
-                            <option>Prague 4</option>
-                            <option>Prague 5</option>
-                            <option>Prague 6</option>
-                            <option>Prague 7</option>
-                            <option>Prague 8</option>
-                            <option>Prague 9</option>
-                            <option>Prague 10</option>
-                            <option>Prague 11</option>
-                            <option>Prague 12</option>
-                            <option>Prague 13</option>
-                            <option>Prague 14</option>
-                            <option>Prague 15</option>
-                            <option>Prague 16</option>
-                            <option>Prague 17</option>
-                            <option>Prague 18</option>
-                            <option>Prague 19</option>
-                            <option>Prague 20</option>
-                            <option>Prague 21</option>
-                            <option>Prague 22</option>
+                                <option>Prague 1</option name="Prague1" >
+                                <option>Prague 2</option name="Prague2">
+                                <option>Prague 3</option name="Prague3">
+                                <option>Prague 4</option name="Prague4">
+                                <option>Prague 5</option name="Prague5">
+                                <option>Prague 6</option name="Prague6">
+                                <option>Prague 7</option name="Prague7">
+                                <option>Prague 8</option name="Prague8">
+                                <option>Prague 9</option name="Prague9">
+                                <option>Prague 10</option name="Prague10">
+                                <option>Prague 11</option name="Prague11">
+                                <option>Prague 12</option name="Prague12">
+                                <option>Prague 13</option name="Prague13">
+                                <option>Prague 14</option name="Prague14">
+                                <option>Prague 15</option name="Prague15">
+                                <option>Prague 16</option name="Prague16">
+                                <option>Prague 17</option name="Prague17">
+                                <option>Prague 18</option name="Prague18">
+                                <option>Prague 19</option name="Prague19">
+                                <option>Prague 20</option name="Prague20">
+                                <option>Prague 21</option name="Prague21">
+                                <option>Prague 22</option name="Prague22">
                          </select>
             </div>
         </div>

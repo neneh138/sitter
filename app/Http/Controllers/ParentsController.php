@@ -79,27 +79,21 @@ class ParentsController extends Controller
 }
 
         $family = new family;
-        $family->family = $request->input('option');
         $family->name = $request->input('name');
         $family->surname = $request->input('surname');
-        $family->location = $request->input('location');
-        
+       $family->emergency_contact_fullname = $request->input('emergencyFullName');
+       $family->emergency_contact_phonenumber	 = $request->input('emergencyContact');
+       $family->phone_number= $request->input('phoneNumber');
+       $family->location = $request->input('location');
+       $family->ages= $request->input('ageCategories');
+       $family->special__needs= $request->input('specialNeeds');
+       $family->description = $request->input('description');
+       $family->availabilities= $request->input('availabity');
+        $family->languages= $request->input('language');
+        $family->certificates= $request->input('certificate');
+        $family->smokers= $request->input('smoker');
+        $family->image_documents= $fileNameToStore;
         $family->image = $fileNameToStore;
-
-        $family->phoneNumber = $request->input('phoneNumber');
-        $family->description = $request->input('description');
-        $family->ageCategories = $request->input('ageCategories');
-        $family->location = $request->input('location');
-
-        $family->availabity = $request->input('availabity');
-        $family->specialNeeds = $request->input('specialNeeds');
-        $family->language = $request->input('language');
-        $family->certificate = $request->input('certificate');
-
-
-        $family->smoker = $request->input('smoker');
-        $family->emergencyFullName = $request->input('emergencyFullName');
-        $family->emergencyContact = $request->input('emergencyContact');
 
 
 

@@ -14,9 +14,9 @@ class CreateSmokersTable extends Migration
     public function up()
     {
         Schema::create('smokers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('Yes');
-            $table->string('No');
+            $table->increments('smoker_id');
+            $table->string('smoker');
+          
             $table->timestamps();
         });
     }

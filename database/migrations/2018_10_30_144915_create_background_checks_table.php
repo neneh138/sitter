@@ -14,9 +14,9 @@ class CreateBackgroundChecksTable extends Migration
     public function up()
     {
         Schema::create('background_checks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('Yes');
-            $table->string('No');
+            $table->increments('background_check_id');
+            $table->string('background_check');
+        
             $table->timestamps();
         });
     }
