@@ -19,11 +19,10 @@ class CreateSittersTable extends Migration
             $table->string('surname')->nullable();
             $table->string('phone_number')->nullable();
 
-            $table->mediumText('description')->nullable();
+            $table->longText('description')->nullable();
 
             $table->string('image')->nullable();
 
-            $table->integer('certificate_id')->nullable();
             $table->integer('driver_license_id')->nullable();
 
             $table->integer('smoker_id')->nullable();

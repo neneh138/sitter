@@ -15,8 +15,8 @@ class CreateSmokersTable extends Migration
     {
         Schema::create('smokers', function (Blueprint $table) {
             $table->increments('smoker_id');
-            $table->string('smoker');
-          
+            $table->string('smoker_category');
+
             $table->timestamps();
         });
     }

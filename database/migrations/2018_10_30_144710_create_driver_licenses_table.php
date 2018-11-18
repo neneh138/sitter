@@ -15,7 +15,7 @@ class CreateDriverLicensesTable extends Migration
     {
         Schema::create('driver_licenses', function (Blueprint $table) {
             $table->increments('driver_license_id');
-            $table->string('driver_license');
+            $table->string('driver_license_category');
 
 
             $table->timestamps();

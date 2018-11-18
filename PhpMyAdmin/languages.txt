@@ -1,0 +1,22 @@
+INSERT
+INTO languages
+(`langauge_category`)
+VALUES
+("Čeština"),
+("Slovenčina"),
+("English"),
+("Deutsch"),
+("Español"),
+("Français"),
+("Italiano"),
+("Pусский"),
+("Other")
+
+
+
+
+
+
+
+
+

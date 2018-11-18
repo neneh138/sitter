@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCertificatesTable extends Migration
+class CreateFamilyMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCertificatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('certificates', function (Blueprint $table) {
-            $table->increments('certificate_id');
-            $table->string('certificate_category');
-
-
+        Schema::create('family_messages', function (Blueprint $table) {
+            $table->increments('family_messages_id');
+            $table->integer('parent_id')->nullable();;
+            $table->longText('message')->nullable();;
 
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateCertificatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('certificates');
+        Schema::dropIfExists('family_messages');
     }
 }

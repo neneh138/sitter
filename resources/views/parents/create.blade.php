@@ -61,16 +61,7 @@
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Emergency contact full name">Emergency contact full name</label>
-                <input type="text" class="form-control" placeholder="Emergency contact full name">
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="Emergency contact phone number">Emergency contact phone number</label>
-                <input type="text" class="form-control" placeholder="Emergency contact phone number">
-            </div>
-        </div>
+
     </div>
 
 

@@ -1,0 +1,17 @@
+INSERT
+INTO special_cares
+(`special_cares_category`)
+VALUES
+("ADHD"),
+("Asthma"),
+("Autism"),
+("Down's syndrome"),
+("Diabetes"),
+("Epilepsy"),
+("Other")
+
+
+
+
+
+

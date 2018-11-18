@@ -22,9 +22,9 @@ class Family extends Model
         return $this->belongsToMany('App\Availability');
     }
 
-    public function spcialneeds()
+    public function special_cares()
     {
-        return $this->belongsToMany('App\SpecialNeed');
+        return $this->belongsToMany('App\SpecialCare');
     }
 
     public function languages()

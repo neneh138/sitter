@@ -3,18 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Age;
 use App\Sitter;
 use App\Family;
 use App\Location;
+use App\SpecialCare;
+use App\Language;
+use App\Certificate;
+
 
 
 class SittersController extends Controller
+
 {
-    public function index()
+
+    public function mydata()
+    {   $locations =  Location::all();
+        $ages =  Age::all();
+        $languages = Language::all();
+        $specialCares = SpecialCare::all();
+        $certificates = Certificate::all();
+
+/*         echo '<pre>';
+        print_r($languages);
+        echo '</pre>';
+           exit(); */
+
+        return view('sitters.create', compact('ages','locations','languages', 'specialCares', 'certificates'));
+
+
+    }
+
+      public function index()
     {
         $title = 'Hi Sitter';
         $families =  Family::all();
-        return view('sitters.index', compact('title', 'families'));
+        $locations =  Location::all();
+
+        return view('sitters.index', compact('title', 'families', 'locations'));
     }
 
     /**
@@ -23,7 +49,9 @@ class SittersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+
     {
+
         return view('/sitters/create');
 
     }
@@ -35,14 +63,18 @@ class SittersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
+      /*  */
+
         //
         $this->validate($request, [
 
             'name'=> 'required',
             'surname'=> 'required',
             'phoneNumber'=> 'required',
-     
+            'description'=>'required',
+
 
 ]);
 
@@ -61,7 +93,10 @@ class SittersController extends Controller
         } else {
             $fileNameToStore = 'noimage.jpg';
         } */
-        $location = new Location;
+        $sitter__location = new Sitter__Location;
+     //   $sitter__location->location_id = $request->input({{$location->id}});
+
+
         $location->save();
 
         $sitter = new Sitter;
@@ -70,6 +105,7 @@ class SittersController extends Controller
         $sitter->name = $request->input('name');
         $sitter->surname = $request->input('surname');
         $sitter->phone_number= $request->input('phoneNumber');
+        $sitter->description= $request->input('description');
 
 
 
