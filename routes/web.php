@@ -15,16 +15,14 @@
 Route::get('/', 'HomeController@index');
 Route::resource('/home', 'HomeController');
 
-
-
-
 Route::resource('/sitters', 'SittersController');
-Route::get('/sitters/create', 'SittersController@mydata');
-
-
 Route::resource('/parents', 'ParentsController');
 
-Route::resource('/locations', 'LocationsController');
+
+Route::resource('/message', 'SitterMessageController');
+
+
+
 
 
 Route::resource('/register/index', 'RegistersController');

@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Age;
+use App\Certificate;
+use App\DriverLicense;
 use App\Sitter;
 use App\Family;
 use App\Location;
 use App\SpecialCare;
+use App\Smoker;
 use App\Language;
-use App\Certificate;
+use App\Favorite;
+use App\SitterMessage;
+use App\SitterLocation;
+use App\SitterAge;
+use App\SitterSpecialCare;
+
 
 
 
@@ -17,22 +25,18 @@ class SittersController extends Controller
 
 {
 
-    public function mydata()
-    {   $locations =  Location::all();
-        $ages =  Age::all();
-        $languages = Language::all();
-        $specialCares = SpecialCare::all();
-        $certificates = Certificate::all();
+
 
 /*         echo '<pre>';
         print_r($languages);
         echo '</pre>';
            exit(); */
 
-        return view('sitters.create', compact('ages','locations','languages', 'specialCares', 'certificates'));
 
 
-    }
+
+
+
 
       public function index()
     {
@@ -50,9 +54,14 @@ class SittersController extends Controller
      */
     public function create()
 
-    {
+    {   $locations =  Location::all();
+        $ages =  Age::all();
+        $languages = Language::all();
+        $specialCares = SpecialCare::all();
+        $certificates = Certificate::all();
+        $driver_licenses = DriverLicense::all();
 
-        return view('/sitters/create');
+        return view('sitters.create', compact('ages','locations','languages', 'specialCares', 'certificates'));
 
     }
 
@@ -65,7 +74,7 @@ class SittersController extends Controller
     public function store(Request $request)
 
     {
-      /*  */
+        return $request->all();
 
         //
         $this->validate($request, [
@@ -93,26 +102,48 @@ class SittersController extends Controller
         } else {
             $fileNameToStore = 'noimage.jpg';
         } */
-        $sitter__location = new Sitter__Location;
-     //   $sitter__location->location_id = $request->input({{$location->id}});
+
+     /*    $sitterLocation = new SitterLocation;
+        $sitterLocation->location_id = $request->input('location_id');
+        $sitterLocation->sitter_id = $request->input('sitter_id');
+        $sitterLocation->save(); */
+
+        $sitter_ages = new SitterAge;
+        $sitter_ages->age_id = $request->input('age_id');
+        $sitter_ages->sitter_id = $request->input('sitter_id');
+        $sitter_ages->save();
+
+        $sitterCertificate = new SitterCertificate;
+        $sitterCertificate->certificate_id = $request->input('certificate_id');
+        $sitterCertificate->sitter_id = $request->input('sitter_id');
+        $sitterCertificate->save();
+
+        $sitterLanguage = new SitterLanguage;
+        $sitterLanguage->language_id = $request->input('language_id');
+        $sitterLanguage->sitter_id = $request->input('sitter_id');
+        $sitterLanguage->other_sitter_languages = $request->input('other_sitter_languages');
+        $sitterLanguage->save();
+
+        $sitter_special_cares = new SitterSpecialCare;
+        $sitter_special_cares->special_cares_id = $request->input('special_cares_id');
+        $sitter_special_cares->sitter_id = $request->input('sitter_id');
+        $sitter_special_cares->other_sitter_special_cares = $request->input('other_sitter_special_cares');
+        $sitter_special_cares->save();
 
 
-        $location->save();
+
 
         $sitter = new Sitter;
-
 
         $sitter->name = $request->input('name');
         $sitter->surname = $request->input('surname');
         $sitter->phone_number= $request->input('phoneNumber');
         $sitter->description= $request->input('description');
-
-
-
-
-
-
+        $post->image = $fileNameToStore;
+        $sitter->driver_license_id= $request->input('driver_license_id');
+        $sitter->smoker_id= $request->input('smoker_id');
         $sitter->save();
+
         return redirect ('sitters.show')->with('success', 'Profile created');
     }
 

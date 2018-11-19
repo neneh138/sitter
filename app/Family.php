@@ -41,4 +41,16 @@ class Family extends Model
     {
         return $this->belongsToMany('App\Favorite');
     }
+
+    public function driver_licenses()
+    {
+        return $this->hasOne('App\DriverLicense');
+    }
+
+    public function smokers()
+    {
+        return $this->hasOne('App\Smoker');
+    }
+
+
 }

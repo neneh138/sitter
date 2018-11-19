@@ -46,4 +46,53 @@ class Sitter extends Model
     {
         return $this->belongsToMany('App\Favorite');
     }
+
+    public function sitter_messages()
+    {
+        return $this->belongsToMany('App\SitterMessage');
+    }
+
+    public function sitter_reviews()
+    {
+        return $this->belongsToMany('App\SitterReview');
+    }
+
+    public function sitter_locations()
+    {
+        return $this->belongsToMany('App\SitterLocation');
+    }
+
+    public function sitter_certificates()
+    {
+        return $this->belongsToMany('App\SitterCertificate');
+    }
+
+    public function sitter_languages()
+    {
+        return $this->belongsToMany('App\SitterLanguage');
+    }
+
+    public function sitter_cares()
+    {
+        return $this->belongsToMany('App\SitterSpecialCare');
+    }
+
+    public function sitter_ages()
+    {
+        return $this->belongsToMany('App\SitterAge');
+    }
+
+
+    public function driver_licenses()
+    {
+        return $this->hasOne('App\DriverLicense');
+    }
+
+    public function smokers()
+    {
+        return $this->hasOne('App\Smoker');
+    }
+
+
+
 }
